@@ -33,4 +33,8 @@ public class Car {
     public String getName() {
         return this.name.getValue();
     }
+
+    public int getPosition() {
+        return this.position.getValue();
+    }
 }
