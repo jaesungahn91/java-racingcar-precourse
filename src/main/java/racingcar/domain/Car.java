@@ -4,6 +4,8 @@ import java.util.Objects;
 
 public class Car {
 
+    private static final int MOVE_CONDITION_NUMBER = 4;
+
     private Name name;
 
     private Position position;
@@ -15,6 +17,16 @@ public class Car {
 
     public void moveCar() {
         this.position.moveForward();
+    }
+
+    public void judgeAndMove(int number) {
+        if (isMoveNumber(number)) {
+            this.moveCar();
+        }
+    }
+
+    private boolean isMoveNumber(int number) {
+        return number >= MOVE_CONDITION_NUMBER;
     }
 
     @Override
