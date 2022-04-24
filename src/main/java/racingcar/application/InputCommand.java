@@ -12,4 +12,9 @@ public class InputCommand {
         return Console.readLine();
     }
 
+    public Integer askTryNumber() {
+        System.out.println(ASK_TRY_NUMBER);
+        return Integer.parseInt(Console.readLine());
+    }
+
 }

@@ -11,8 +11,7 @@ public class GameManager {
     public void play() {
 
         String[] carNames = new CarsDTO(inputCommand.askCarNames()).toCarNames();
-
-
+        Integer tryNumber = inputCommand.askTryNumber();
 
     }
 
