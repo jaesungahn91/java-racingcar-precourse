@@ -17,13 +17,17 @@ public class GameManager {
     public void play() {
 
         String[] carNames = new CarsDTO(inputCommand.askCarNames()).toCarNames();
-        Integer roundNumber = inputCommand.askTryNumber();
-
         Cars cars = new Cars(carNames);
-        for (int round = START_ROUND_NUMBER; round <= roundNumber; round++) {
+
+        Integer tryNumber = inputCommand.askTryNumber();
+
+        for (int round = START_ROUND_NUMBER; round <= tryNumber; round++) {
             cars.playRound();
             outputCommand.printCarPosition(cars);
         }
+
+        cars.findWinners();
+        outputCommand.printWinners(cars.getWinnerNames());
 
     }
 

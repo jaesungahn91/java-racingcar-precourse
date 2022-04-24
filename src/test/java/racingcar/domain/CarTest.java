@@ -32,4 +32,11 @@ class CarTest {
         assertThat(car.getPosition()).isEqualTo(positionValue);
     }
 
+    @Test
+    void 포지션값_비교() {
+        Car car = new Car("pobi");
+        car.moveCar();
+
+        assertThat(car.compareHighPosition(0)).isEqualTo(car.getPosition());
+    }
 }

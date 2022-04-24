@@ -14,8 +14,7 @@ public class Name {
 
     private void validation(String name) {
         if (name.length() > NAME_MIN_LENGTH) {
-            System.out.println(ERROR_MESSAGE);
-            throw new IllegalArgumentException();
+            throw new IllegalArgumentException(ERROR_MESSAGE);
         }
     }
 

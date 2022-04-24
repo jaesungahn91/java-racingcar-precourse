@@ -29,6 +29,10 @@ public class Car {
         return number >= MOVE_CONDITION_NUMBER;
     }
 
+    public int compareHighPosition(int highPosition) {
+        return Math.max(this.getPosition(), highPosition);
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
